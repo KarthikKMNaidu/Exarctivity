@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/click_full"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center"
+    android:minHeight="70dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rel_lay"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:minHeight="70dp"
+        android:layout_height="match_parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pro_image"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|start"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/profile_gray"
+            app:civ_border_color="@color/main_color"
+            tools:ignore="RtlHardcoded" />
+
+
+
+        <LinearLayout
+            android:id="@+id/text_lay"
+            android:layout_toRightOf="@+id/pro_image"
+            android:paddingLeft="16dp"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <typeface.CustomFontTextView
+                android:id="@+id/name_tv"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:gravity="center|start"
+                app:style="@string/normalfont"
+                android:text="Dr. K. Prasad Shanbhogue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <typeface.CustomFontTextView
+                android:id="@+id/time_tv"
+                android:textColor="@color/view"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:gravity="center|start"
+                app:style="@string/italicfont"
+                android:text="In Out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <typeface.CustomFontTextView
+                android:id="@+id/total_time_tv"
+                android:textColor="@color/view"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:gravity="center|start"
+                app:style="@string/italicfont"
+                android:text="Total Hrs : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:background="@color/view_color"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+
+
+</LinearLayout>

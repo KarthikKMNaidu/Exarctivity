@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) Davinta Technologies 2017. All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information
+  ~ of Davinta Technologies. You shall not disclose such Confidential Information
+  ~ and shall use it only in accordance with the terms and conditions
+  ~ entered into with Davinta Technologies.
+  -->
+<!--
+
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:width="60dp" android:height="60dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/main_colcor" />
+
+                </shape>
+            </item>
+
+        </layer-list>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="30dp" android:height="30dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/white" />
+
+        </shape>
+    </item>
+
+</layer-list>

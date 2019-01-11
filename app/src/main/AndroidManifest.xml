@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    package="com.exarcplus.exarctivity">
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" tool:ignore="ProtectedPermissions" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:name="setting_package.AppController"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon"
+        tool:replace="android:icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme4">
+        <activity android:name=".Activity_Launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".Activity_Login"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+        <activity android:name=".Activity_SignUp"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+
+
+        <activity android:name="imageCropPackage.Activity_Crop"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"/>
+
+        <activity android:name="package_qr.ScanActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"/>
+
+        <activity android:name=".Activity_Main"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"/>
+
+
+        <activity android:name="package_profile.Activity_Edit_Profile"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"/>
+
+
+        <activity android:name="package_announcement.Activity_Add_Announcement"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"/>
+
+
+        <activity android:name="test_package.MenuInScrollViewActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme3"/>
+
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.exarcplus.exarctivity.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_path" />
+        </provider>
+
+
+
+
+
+
+
+    </application>
+
+</manifest>

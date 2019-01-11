@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/click_full"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="55dp">
+
+
+        <RelativeLayout
+            android:id="@+id/text_lay"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <typeface.CustomFontTextView
+                android:id="@+id/name_tv"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="start|top"
+                app:style="@string/normalfont"
+                android:text="Karnataka Rajayothsava"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <typeface.CustomFontTextView
+                android:id="@+id/date_tv"
+                android:layout_above="@+id/view"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:gravity="center|start"
+                app:style="@string/italicfont"
+                android:text="Karnataka Rajayothsava"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/view_color"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+        </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:background="@color/app_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar1"
+            app:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/app_color"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:id="@+id/back_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:src="@mipmap/back_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:tint="@color/white" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tool_address_click"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70">
+
+                    <typeface.CustomFontTextView
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="ADD ANNOUNCEMENT"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:style="@string/boldfont" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/side_menu_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/side_menu_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:visibility="gone"
+        android:backgroundTint="@color/white"
+        android:progressTint="@color/button_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:background="@color/white"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/full_click"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_above="@+id/card_lay"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/click_full"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+                <ImageView
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/app_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+
+
+                <typeface.CustomFontTextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:text="Title"
+                    android:textColor="@color/view"
+                    android:textSize="14sp"
+                    app:style="@string/normalfont" />
+
+
+                <LinearLayout
+                    android:background="@color/view_color"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edt_subject"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center|start"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:met_hideUnderline="true"
+                        app:met_floatingLabel="none"
+                        app:met_textColor="@color/black"
+                        app:met_floatingLabelTextColor="@color/black"
+                        app:met_primaryColor="@color/black" />
+
+                </LinearLayout>
+
+
+
+                <typeface.CustomFontTextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:text="Description"
+                    android:textColor="@color/view"
+                    android:textSize="14sp"
+                    app:style="@string/normalfont" />
+
+
+                <LinearLayout
+                    android:background="@color/view_color"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edt_message"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:minLines="5"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:met_hideUnderline="true"
+                        app:met_floatingLabel="none"
+                        app:met_textColor="@color/black"
+                        app:met_floatingLabelTextColor="@color/black"
+                        app:met_primaryColor="@color/black" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_lay"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            app:cardBackgroundColor="@color/app_color"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+
+            <typeface.CustomFontTextView
+                android:id="@+id/submit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="SUBMIT"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:style="@string/normalfont" />
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

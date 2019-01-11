@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:visibility="gone"
+        android:layout_marginTop="51dp"
+        android:backgroundTint="@color/white"
+        android:progressTint="@color/button_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:background="@color/white"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/main_color">
+
+            <LinearLayout
+                android:weightSum="1.0"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/side_menu"
+                    android:visibility="gone"
+                    android:gravity="center|left"
+                    android:layout_weight="0.0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:tint="@color/white"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tool_address_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <typeface.CustomFontTextView
+                        android:textSize="15sp"
+                        android:textAllCaps="true"
+                        android:singleLine="true"
+                        android:id="@+id/header"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        app:style="@string/boldfont"
+                        android:text="QR SCANNER"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/side_menu_lay"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_weight="0.15"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/side_menu_iv"
+                        android:layerType="software"
+                        android:visibility="visible"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/app_bar"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_weight="0.4"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+            <ImageView
+                android:id="@+id/reference_iv"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/qr_icon" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+            <android.support.v7.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <LinearLayout
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@mipmap/calendar_gray"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+
+                    <typeface.CustomFontTextView
+                        android:id="@+id/date_tv"
+                        android:paddingLeft="16dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/view"
+                        android:gravity="center|start"
+                        app:style="@string/italicfont"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_weight="0.5"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/check_in_lay"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:background="@color/button_bg_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <ImageView
+                                android:src="@mipmap/check_in_white"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp" />
+
+                            <typeface.CustomFontTextView
+                                android:paddingLeft="16dp"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                app:style="@string/normalfont"
+                                android:text="CHECK IN"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <typeface.CustomFontTextView
+                            android:id="@+id/in_time_tv"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            app:style="@string/italicfont"
+                            android:hint="--/--"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" />
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_weight="0.5"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/check_out_lay"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:background="@color/button_bg_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <ImageView
+                                android:src="@mipmap/check_out_white"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp" />
+
+                            <typeface.CustomFontTextView
+                                android:paddingLeft="16dp"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:gravity="center|start"
+                                app:style="@string/normalfont"
+                                android:text="CHECK OUT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <typeface.CustomFontTextView
+                            android:id="@+id/out_time_tv"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            app:style="@string/italicfont"
+                            android:hint="--/--"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" />
+
+
+
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+
+
+            <typeface.CustomFontTextView
+                android:id="@+id/difference_time_tv"
+                android:textSize="14sp"
+                android:textColor="@color/view"
+                android:gravity="center"
+                app:style="@string/italicfont"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

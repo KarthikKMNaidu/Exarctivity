@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/card_lay2"
+        android:layout_above="@+id/below"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/below"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:background="@color/view_color"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+
+            <LinearLayout
+                android:id="@+id/b_attendance_click"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/b_attendance_iv"
+                    android:src="@mipmap/calendar_gray"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/b_announce_click"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/b_announce_iv"
+                    android:src="@mipmap/announcement_gray"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+          <!--  <LinearLayout
+                android:id="@+id/b_scanner_click"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/b_scanner_iv"
+                    android:src="@drawable/green_circle"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"/
+
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/b_holidays_click"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/b_holidays_iv"
+                    android:src="@mipmap/holiday_gray"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/b_profile_click"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/b_profile_iv"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@mipmap/profile_gray" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/bottom_lay"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.20" />
+
+            <Space
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/b_scanner_click"
+                android:gravity="center|top"
+                android:minWidth="50dp"
+                android:orientation="vertical"
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/b_scanner_iv"
+                    android:src="@mipmap/qr_color"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Space
+                android:layout_weight="0.20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:visibility="gone"
+        android:layout_marginTop="51dp"
+        android:backgroundTint="@color/white"
+        android:progressTint="@color/main_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:background="@color/white"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <typeface.CustomFontTextView
+                    android:textSize="15sp"
+                    android:textAllCaps="true"
+                    android:singleLine="true"
+                    android:id="@+id/header"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    app:style="@string/boldfont"
+                    android:text="REGISTER"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+    <ScrollView
+        android:id="@+id/scrolView"
+        android:layout_above="@+id/card_lay"
+        android:layout_below="@+id/app_bar"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/click_full"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_lay"
+                    android:background="@mipmap/circle_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="100dp"
+                        app:civ_border_width="1dp"
+                        android:layout_height="100dp"
+                        android:src="@mipmap/profile_bg_icon"
+                        app:civ_border_color="@color/white"
+                        tools:ignore="RtlHardcoded" />
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:background="@android:color/transparent"
+                        android:gravity="bottom|right"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+
+                        <ImageView
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@mipmap/camera_icon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/full_click"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:capitalize="words"
+                    android:gravity="center|start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="FULL NAME"
+                    android:text=""
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_textColor="@color/black"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_primaryColor="@color/black" />
+
+
+
+                <typeface.CustomFontTextView
+                    android:textSize="12sp"
+                    android:textColor="@color/gray"
+                    android:gravity="center|start"
+                    app:style="@string/italicfont"
+                    android:text="GENDER"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/male_lay"
+                        android:paddingLeft="10dp"
+                        android:gravity="center|start"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp">
+
+
+                        <ImageView
+                            android:id="@+id/male_iv"
+                            android:src="@mipmap/male_gray"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                        <typeface.CustomFontTextView
+                            android:textSize="12sp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/gray"
+                            android:gravity="center|start"
+                            app:style="@string/italicfont"
+                            android:text="Male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/female_lay"
+                        android:gravity="center|start"
+                        android:paddingLeft="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp">
+
+
+                        <ImageView
+                            android:id="@+id/female_iv"
+                            android:src="@mipmap/female_gray"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                        <typeface.CustomFontTextView
+                            android:textSize="12sp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/gray"
+                            android:gravity="center|start"
+                            app:style="@string/italicfont"
+                            android:text="Female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="EMAIL ID (Exarcplus)"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_textColor="@color/black"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_primaryColor="@color/black" />
+
+
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edt_pswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:capitalize="words"
+                    android:gravity="center|start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="PASSWORD"
+                    android:text=""
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_textColor="@color/black"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_primaryColor="@color/black" />
+
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edt_confirm_pswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:capitalize="words"
+                    android:gravity="center|start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="CONFIRM PASSWORD"
+                    android:text=""
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_textColor="@color/black"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_primaryColor="@color/black" />
+
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:capitalize="words"
+                    android:gravity="center|start"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="MOBILE NUMBER"
+                    android:text=""
+                    android:maxLength="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_textColor="@color/black"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_primaryColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_lay"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/sign_in_tv"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        app:cardBackgroundColor="@color/button_bg_color"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+
+        <typeface.CustomFontTextView
+            android:id="@+id/submit_tv"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="REGISTER"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:style="@string/normalfont" />
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <typeface.CustomFontTextView
+        android:id="@+id/sign_in_tv"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Already have an account? LOGIN"
+        android:textColor="@color/view"
+        android:textSize="12sp"
+        app:style="@string/italicfont" />
+
+
+</RelativeLayout>
